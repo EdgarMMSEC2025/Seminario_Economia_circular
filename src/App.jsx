@@ -40,6 +40,8 @@ const IconCheck = ({ className }) => <svg className={className} fill="none" view
 const IconClock = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>;
 const IconUsers = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" /></svg>;
 const IconCalendar = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>;
+const IconChevronLeft = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>;
+const IconChevronRight = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>;
 
 // --- COMPONENTES UI COMPARTIDOS ---
 const Button = ({ children, href, variant = 'primary', className = '' }) => {
@@ -123,7 +125,7 @@ const Hero = () => {
         
         <FadeIn delay={200}>
           <p className="mt-4 text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-light mb-10 drop-shadow">
-            Gestión de Proyectos orientados a implementar el modelo de economía circular en las organizaciones.
+            Gestión de Proyectos orientados a implementar modelos de sustentabilidad en las organizaciones modernas.
           </p>
         </FadeIn>
         
@@ -239,6 +241,27 @@ const Timeline = () => {
 };
 
 const Facilitators = () => {
+  // Lista de docentes actualizadas con enlaces de imagen.
+  // IMPORTANTE: Asegúrate de guardar las imágenes en tu carpeta "public"
+  // con estos nombres (ej. "foto-edgar.jpg") para que se muestren.
+  const docentes = [
+    { name: "M. en A. Edgar Maldonado Mosqueda", role: "Coordinador y Facilitador", img: "/foto-edgar.jpg" },
+    { name: "Dra. Jahel Valdés Sauceda", role: "Facilitadora", img: "/foto-jahel.jpg" },
+    { name: "M. en C. Angélica Jaime Fonseca", role: "Facilitadora", img: "/foto-angelica.jpg" },
+    { name: "Dra. Aurora Hernández Garrido", role: "Facilitadora", img: "/foto-aurora.jpg" },
+  ];
+
+  const facilitadorasApoyo = [
+    { name: "Ing. Nassyra María Larragoiti Gutiérrez", role: "Facilitadora", img: "/foto-nassyra.jpg" },
+    { name: "Ing. Yuliana Garrido Garrido", role: "Facilitadora", img: "/foto-yuliana.jpg" },
+  ];
+
+  // Función para manejar errores de imagen y poner un icono de respaldo
+  const handleImageError = (e) => {
+    e.target.style.display = 'none';
+    e.target.nextSibling.style.display = 'flex'; // Muestra el icono de usuario
+  };
+
   return (
     <section id="facilitators" className="py-24 bg-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -253,16 +276,16 @@ const Facilitators = () => {
         <div className="mb-12">
           <h4 className="text-2xl font-bold text-slate-800 border-b-2 border-[#0B6A35] pb-2 inline-block mb-8">Docentes</h4>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { name: "M. en A. Edgar Maldonado Mosqueda", role: "Coordinador y Facilitador" },
-              { name: "Dra. Jahel Valdés Sauceda", role: "Facilitadora" },
-              { name: "M. en C. Angélica Jaime Fonseca", role: "Facilitadora" },
-              { name: "Dra. Aurora Hernández Garrido", role: "Facilitadora" },
-            ].map((person, idx) => (
+            {docentes.map((person, idx) => (
               <FadeIn key={idx} delay={idx * 100} className="h-full">
-                <div className="bg-white p-6 rounded-2xl shadow-md border border-slate-100 h-full flex flex-col items-center text-center hover:-translate-y-1 transition-transform">
-                  <div className="w-20 h-20 rounded-full bg-slate-200 mb-4 overflow-hidden border-4 border-slate-100 shadow-sm flex items-center justify-center text-slate-400">
-                    <IconUsers className="w-10 h-10" />
+                <div className="bg-white p-6 rounded-2xl shadow-md border border-slate-100 h-full flex flex-col items-center text-center hover:-translate-y-1 transition-transform group">
+                  <div className="w-24 h-24 rounded-full bg-slate-200 mb-4 overflow-hidden border-4 border-white shadow-md relative">
+                    {/* Imagen principal (si existe en la carpeta public) */}
+                    <img src={person.img} alt={person.name} className="w-full h-full object-cover" onError={handleImageError} />
+                    {/* Icono de respaldo (se muestra si la imagen falla) */}
+                    <div className="absolute inset-0 flex items-center justify-center text-slate-400 bg-slate-100" style={{ display: 'none' }}>
+                      <IconUsers className="w-12 h-12" />
+                    </div>
                   </div>
                   <h5 className="font-bold text-slate-900 text-base md:text-lg mb-1">{person.name}</h5>
                   <p className="text-[#1D4ED8] text-sm font-medium">{person.role}</p>
@@ -275,14 +298,16 @@ const Facilitators = () => {
         <div>
           <h4 className="text-2xl font-bold text-slate-800 border-b-2 border-[#38BDF8] pb-2 inline-block mb-8">Facilitadoras</h4>
           <div className="grid md:grid-cols-2 gap-8 max-w-2xl">
-            {[
-              { name: "Ing. Nassyra María Larragoiti Gutiérrez", role: "Facilitadora" },
-              { name: "Ing. Yuliana Garrido Garrido", role: "Facilitadora" },
-            ].map((person, idx) => (
+            {facilitadorasApoyo.map((person, idx) => (
               <FadeIn key={idx} delay={idx * 100}>
                 <div className="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex items-center gap-4 hover:-translate-y-1 transition-transform">
-                  <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-[#38BDF8] shrink-0">
-                    <IconUsers className="w-8 h-8" />
+                  <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0 overflow-hidden border-2 border-white shadow-sm relative">
+                     {/* Imagen principal */}
+                     <img src={person.img} alt={person.name} className="w-full h-full object-cover" onError={handleImageError} />
+                     {/* Icono de respaldo */}
+                     <div className="absolute inset-0 flex items-center justify-center text-[#38BDF8] bg-blue-50" style={{ display: 'none' }}>
+                      <IconUsers className="w-8 h-8" />
+                     </div>
                   </div>
                   <div>
                     <h5 className="font-bold text-slate-900">{person.name}</h5>
@@ -375,10 +400,9 @@ const Requirements = () => {
 };
 
 const PricingAndMedia = () => {
-  // Estado para controlar qué testimonio se muestra (0, 1, 2 o 3)
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [currentVideo, setCurrentVideo] = useState(0);
 
-  // Arreglo con los testimonios solicitados
   const testimonials = [
     {
       quote: "Me abrió muchas puertas el conocer de todos los temas que se trataron en el seminario, definitivamente es algo que me gustó, lo recomiendo y lo volvería a tomar.",
@@ -398,13 +422,23 @@ const PricingAndMedia = () => {
     }
   ];
 
-  // Efecto automático para rotar el carrusel cada 6 segundos
+  // Lista de videos. Puedes agregar o cambiar URLs de YouTube aquí.
+  const videoList = [
+    "https://www.youtube.com/embed/QOM_mLsamcA?si=tgeS1S-zZMBRiheU",
+    // Ejemplos adicionales de videos, cámbialos por los reales si tienes más
+    "https://www.youtube.com/embed/zCRKvDyyHmI?si=WzXJ38sA7g5J2D_X", 
+    "https://www.youtube.com/embed/2B2b8H5hJgI?si=Kq2l_X8_U9n6_xH9"
+  ];
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 6000); 
     return () => clearInterval(timer);
   }, [testimonials.length]);
+
+  const nextVideo = () => setCurrentVideo((prev) => (prev + 1) % videoList.length);
+  const prevVideo = () => setCurrentVideo((prev) => (prev === 0 ? videoList.length - 1 : prev - 1));
 
   return (
     <section id="pricing" className="py-24 bg-slate-50 relative">
@@ -468,17 +502,38 @@ const PricingAndMedia = () => {
 
           {/* Media & Testimonials */}
           <FadeIn delay={200} className="space-y-8">
-            {/* Contenedor del video de YouTube Responsivo */}
-            <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-100 w-full aspect-video">
-              <iframe 
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/QOM_mLsamcA?si=tgeS1S-zZMBRiheU" 
-                title="YouTube video player" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin" 
-                allowFullScreen
-              ></iframe>
+            
+            {/* Carrusel de Videos de YouTube */}
+            <div className="relative group">
+              <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-100 w-full aspect-video">
+                <iframe 
+                  className="w-full h-full"
+                  src={videoList[currentVideo]} 
+                  title="YouTube video player" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                ></iframe>
+              </div>
+              
+              {/* Controles de video (Flechas) */}
+              {videoList.length > 1 && (
+                <>
+                  <button onClick={prevVideo} className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white text-[#1D4ED8] rounded-full shadow-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <IconChevronLeft className="w-6 h-6" />
+                  </button>
+                  <button onClick={nextVideo} className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white text-[#1D4ED8] rounded-full shadow-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <IconChevronRight className="w-6 h-6" />
+                  </button>
+                  {/* Indicador de video */}
+                  <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
+                    {videoList.map((_, idx) => (
+                      <div key={idx} className={`h-1.5 rounded-full transition-all ${currentVideo === idx ? 'w-4 bg-white shadow' : 'w-1.5 bg-white/50'}`}></div>
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
 
             {/* Testimonios - Carrusel */}
@@ -486,7 +541,6 @@ const PricingAndMedia = () => {
               <div className="text-4xl text-[#38BDF8] opacity-20 absolute top-4 left-4 font-serif">"</div>
               
               <div className="relative z-10 transition-all duration-500 ease-in-out">
-                {/* min-h asegura que la tarjeta no cambie de tamaño si un texto es más corto */}
                 <p className="text-slate-600 italic pl-6 text-sm mb-4 min-h-[100px] md:min-h-[80px]">
                   {testimonials[currentTestimonial].quote}
                 </p>
