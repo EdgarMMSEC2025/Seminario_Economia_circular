@@ -460,7 +460,7 @@ const PricingAndMedia = () => {
                   <p className="text-xs text-slate-400">Transferencia bancaria SPEI y Depósito en ventanilla BBVA.</p>
                 </div>
                 <Button variant="primary" href="#enroll" className="w-full py-4 text-lg">
-                  Asegurar mi lugar
+                  Reservar mi lugar
                 </Button>
               </div>
             </div>
