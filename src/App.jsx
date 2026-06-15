@@ -125,7 +125,7 @@ const Hero = () => {
         
         <FadeIn delay={200}>
           <p className="mt-4 text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto font-light mb-10 drop-shadow">
-            Gestión de Proyectos orientados a implementar modelos de sustentabilidad en las organizaciones modernas.
+            Gestión de Proyectos orientados a implementar modelos de economía circular en las organizaciones.
           </p>
         </FadeIn>
         
@@ -151,7 +151,7 @@ const Hero = () => {
           <div className="text-center relative">
             <div className="text-3xl font-bold text-yellow-400 flex justify-center items-center gap-1">
               <div className="w-3 h-3 bg-yellow-400 rounded-full animate-ping absolute top-2 right-6"></div>
-              69
+              65
             </div>
             <div className="text-sm text-blue-200 mt-1">Lugares restantes</div>
           </div>
