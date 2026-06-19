@@ -730,7 +730,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <About />
-      <GlobalReach/>
+      <GlobalReach /> {/* <-- ESTA ES LA LÍNEA MÁGICA QUE FALTA */}
       <Timeline />
       <Facilitators />
       <Requirements />
