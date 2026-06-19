@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// --- COMPONENTES DE ANIMACIÓN ---
 const FadeIn = ({ children, delay = 0, className = "" }) => {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef();
@@ -32,7 +31,6 @@ const FadeIn = ({ children, delay = 0, className = "" }) => {
   );
 };
 
-// --- ICONOS SVG ---
 const IconLeaf = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>;
 const IconCpu = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>;
 const IconWhatsApp = ({ className }) => <svg className={className} fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>;
@@ -42,8 +40,10 @@ const IconUsers = ({ className }) => <svg className={className} fill="none" view
 const IconCalendar = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>;
 const IconChevronLeft = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>;
 const IconChevronRight = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>;
+const IconGlobe = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>;
+const IconMapPin = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>;
+const IconBriefcase = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>;
 
-// --- COMPONENTES UI COMPARTIDOS ---
 const Button = ({ children, href, variant = 'primary', className = '' }) => {
   const baseStyle = "inline-flex items-center justify-center font-bold rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5";
   const variants = {
@@ -59,7 +59,6 @@ const Button = ({ children, href, variant = 'primary', className = '' }) => {
   );
 };
 
-// --- SECCIONES DE LA PÁGINA ---
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -73,7 +72,6 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         <div className="flex items-center gap-3">
-          {/* Imágenes locales sin bucle de error */}
           <img src="/IPN.png" alt="IPN" className="h-10 w-auto object-contain drop-shadow-sm" onError={(e) => { e.target.style.display = 'none'; }} />
           <img src="/ESIQIE.png" alt="ESIQIE" className="h-10 w-auto object-contain drop-shadow-sm" onError={(e) => { e.target.style.display = 'none'; }} />
           <div className={`font-black text-xl leading-tight hidden sm:block ${scrolled ? 'text-slate-900' : 'text-white drop-shadow-md'}`}>
@@ -97,20 +95,17 @@ const Navbar = () => {
 const Hero = () => {
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
-      {/* Background Decorators */}
       <div className="absolute inset-0 z-0 bg-slate-900">
         <div className="absolute inset-0 bg-gradient-to-br from-[#1D4ED8]/80 to-[#0B6A35]/90 z-10 mix-blend-multiply"></div>
         <div className="absolute inset-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-40"></div>
       </div>
       
-      {/* Urgency Banner */}
       <div className="absolute top-0 left-0 w-full bg-[#38BDF8] text-slate-900 text-center py-2 font-bold text-sm z-40 animate-pulse">
         🔥 ÚLTIMOS LUGARES DISPONIBLES - DOS GRUPOS APERTURADOS 🔥
       </div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeIn>
-          {/* Logo del Seminario local sin bucle de error */}
           <img src="/U1S1L.png" alt="Logo Seminario Economía Circular" className="mx-auto h-32 md:h-40 w-auto mb-6 object-contain drop-shadow-2xl bg-white/90 rounded-3xl p-3 shadow-lg border border-white/20" onError={(e) => { e.target.style.display = 'none'; }} />
           <span className="inline-block py-1 px-3 rounded-full bg-white/20 text-white backdrop-blur-sm border border-white/30 text-sm font-semibold tracking-wider mb-6">
             16 SEMANAS • 100% EN LÍNEA • OPCIÓN A TITULACIÓN
@@ -134,7 +129,6 @@ const Hero = () => {
           <Button variant="secondary" href="#timeline" className="text-lg bg-white/10 text-white border-white/30 hover:bg-white hover:text-[#1D4ED8]">Ver Temario Completo</Button>
         </FadeIn>
 
-        {/* Social Proof / Stats */}
         <FadeIn delay={400} className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-white/20 pt-8">
           <div className="text-center">
             <div className="text-3xl font-bold text-white">16</div>
@@ -151,7 +145,7 @@ const Hero = () => {
           <div className="text-center relative">
             <div className="text-3xl font-bold text-yellow-400 flex justify-center items-center gap-1">
               <div className="w-3 h-3 bg-yellow-400 rounded-full animate-ping absolute top-2 right-6"></div>
-              59
+              60
             </div>
             <div className="text-sm text-blue-200 mt-1">Lugares restantes</div>
           </div>
@@ -219,7 +213,7 @@ const GlobalReach = () => {
             <h2 className="text-[#0B6A35] font-bold tracking-wide uppercase text-sm mb-2">Impacto Real</h2>
             <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">Alcance Nacional e Internacional</h3>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Nuestros egresados cursaron seminario en organizaciones de primer nivel alrededor del mundo.
+              Nuestros egresados cursaron este seminario en organizaciones de primer nivel y en diferentes partes del mundo.
             </p>
           </FadeIn>
         </div>
@@ -241,9 +235,9 @@ const GlobalReach = () => {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-[#0B6A35]">
                 <IconMapPin className="w-8 h-8" />
               </div>
-              <div className="text-4xl font-black text-slate-900 mb-2">9</div>
+              <div className="text-4xl font-black text-slate-900 mb-2">14</div>
               <div className="text-lg font-bold text-slate-700 mb-2">Estados (México)</div>
-              <p className="text-sm text-slate-500">CDMX, Edomex, N.L., Puebla, Veracruz, Hidalgo, Querétaro, Guanajuato, Tlaxcala, Oaxaca, Tlaxcala, Chiapas y Q. Roo.</p>
+              <p className="text-sm text-slate-500">CDMX, Edomex, Nuevo León., Puebla, Veracruz, Oaxaca, Morelos, Querétaro, Guanajuato, Hidalgo, Tlaxcala, Zacatecas, Chiapas y Quintana Roo.</p>
             </div>
           </FadeIn>
 
@@ -273,6 +267,7 @@ const GlobalReach = () => {
     </section>
   );
 };
+
 const Timeline = () => {
   const modules = [
     { week: "Semanas 1-4", title: "Gestión de Proyectos", date: "Unidad I", desc: "Introducción a la gestión de proyectos, iniciación, planificación, ejecución y metodologías de gestión de proyectos 4.0 enfocadas en sustentabilidad." },
@@ -314,9 +309,6 @@ const Timeline = () => {
 };
 
 const Facilitators = () => {
-  // Lista de docentes actualizadas con enlaces de imagen.
-  // IMPORTANTE: Asegúrate de guardar las imágenes en tu carpeta "public"
-  // con estos nombres (ej. "foto-edgar.jpg") para que se muestren.
   const docentes = [
     { name: "M. en A. Edgar Maldonado Mosqueda", role: "Coordinador y Facilitador", img: "/foto-edgar.jpg" },
     { name: "Dra. Jahel Valdés Sauceda", role: "Facilitadora", img: "/foto-jahel.jpg" },
@@ -329,10 +321,9 @@ const Facilitators = () => {
     { name: "Ing. Yuliana Garrido Garrido", role: "Facilitadora", img: "/foto-yuliana.jpg" },
   ];
 
-  // Función para manejar errores de imagen y poner un icono de respaldo
   const handleImageError = (e) => {
     e.target.style.display = 'none';
-    e.target.nextSibling.style.display = 'flex'; // Muestra el icono de usuario
+    e.target.nextSibling.style.display = 'flex';
   };
 
   return (
@@ -353,9 +344,7 @@ const Facilitators = () => {
               <FadeIn key={idx} delay={idx * 100} className="h-full">
                 <div className="bg-white p-6 rounded-2xl shadow-md border border-slate-100 h-full flex flex-col items-center text-center hover:-translate-y-1 transition-transform group">
                   <div className="w-24 h-24 rounded-full bg-slate-200 mb-4 overflow-hidden border-4 border-white shadow-md relative">
-                    {/* Imagen principal (si existe en la carpeta public) */}
                     <img src={person.img} alt={person.name} className="w-full h-full object-cover" onError={handleImageError} />
-                    {/* Icono de respaldo (se muestra si la imagen falla) */}
                     <div className="absolute inset-0 flex items-center justify-center text-slate-400 bg-slate-100" style={{ display: 'none' }}>
                       <IconUsers className="w-12 h-12" />
                     </div>
@@ -375,9 +364,7 @@ const Facilitators = () => {
               <FadeIn key={idx} delay={idx * 100}>
                 <div className="bg-white p-6 rounded-2xl shadow-md border border-slate-100 flex items-center gap-4 hover:-translate-y-1 transition-transform">
                   <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center shrink-0 overflow-hidden border-2 border-white shadow-sm relative">
-                     {/* Imagen principal */}
                      <img src={person.img} alt={person.name} className="w-full h-full object-cover" onError={handleImageError} />
-                     {/* Icono de respaldo */}
                      <div className="absolute inset-0 flex items-center justify-center text-[#38BDF8] bg-blue-50" style={{ display: 'none' }}>
                       <IconUsers className="w-8 h-8" />
                      </div>
@@ -495,10 +482,8 @@ const PricingAndMedia = () => {
     }
   ];
 
-  // Lista de videos. Puedes agregar o cambiar URLs de YouTube aquí.
   const videoList = [
     "https://www.youtube.com/embed/QOM_mLsamcA?si=tgeS1S-zZMBRiheU",
-    // Ejemplos adicionales de videos, cámbialos por los reales si tienes más
     "https://www.youtube.com/embed/zCRKvDyyHmI?si=WzXJ38sA7g5J2D_X", 
     "https://www.youtube.com/embed/2B2b8H5hJgI?si=Kq2l_X8_U9n6_xH9"
   ];
@@ -547,7 +532,6 @@ const PricingAndMedia = () => {
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           
-          {/* Pricing Card */}
           <FadeIn>
             <div className="bg-white rounded-3xl shadow-2xl border border-slate-100 overflow-hidden relative">
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#1D4ED8] to-[#0B6A35]"></div>
@@ -573,10 +557,7 @@ const PricingAndMedia = () => {
             </div>
           </FadeIn>
 
-          {/* Media & Testimonials */}
           <FadeIn delay={200} className="space-y-8">
-            
-            {/* Carrusel de Videos de YouTube */}
             <div className="relative group">
               <div className="rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-slate-100 w-full aspect-video">
                 <iframe 
@@ -590,7 +571,6 @@ const PricingAndMedia = () => {
                 ></iframe>
               </div>
               
-              {/* Controles de video (Flechas) */}
               {videoList.length > 1 && (
                 <>
                   <button onClick={prevVideo} className="absolute left-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white text-[#1D4ED8] rounded-full shadow-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -599,7 +579,6 @@ const PricingAndMedia = () => {
                   <button onClick={nextVideo} className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white text-[#1D4ED8] rounded-full shadow-md flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                     <IconChevronRight className="w-6 h-6" />
                   </button>
-                  {/* Indicador de video */}
                   <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
                     {videoList.map((_, idx) => (
                       <div key={idx} className={`h-1.5 rounded-full transition-all ${currentVideo === idx ? 'w-4 bg-white shadow' : 'w-1.5 bg-white/50'}`}></div>
@@ -609,7 +588,6 @@ const PricingAndMedia = () => {
               )}
             </div>
 
-            {/* Testimonios - Carrusel */}
             <div className="bg-white p-6 rounded-2xl shadow-md border border-slate-100 relative">
               <div className="text-4xl text-[#38BDF8] opacity-20 absolute top-4 left-4 font-serif">"</div>
               
@@ -626,7 +604,6 @@ const PricingAndMedia = () => {
                 </div>
               </div>
 
-              {/* Controles de Carrusel (Los puntitos) */}
               <div className="flex justify-center gap-2 mt-4">
                 {testimonials.map((_, idx) => (
                   <button
@@ -656,7 +633,6 @@ const EnrollmentForm = () => {
           Por favor, completa el siguiente formulario. Asegúrate de tener tus documentos listos en formato digital para agilizar tu proceso.
         </p>
         
-        {/* Aquí va el iFrame de Microsoft Forms corregido para React */}
         <div className="bg-slate-50 p-2 sm:p-6 rounded-3xl border border-slate-200 shadow-inner w-full min-h-[600px] flex items-center justify-center">
           <iframe 
             width="640px"
@@ -730,7 +706,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <About />
-      <GlobalReach /> {/* <-- ESTA ES LA LÍNEA MÁGICA QUE FALTA */}
+      <GlobalReach />
       <Timeline />
       <Facilitators />
       <Requirements />
