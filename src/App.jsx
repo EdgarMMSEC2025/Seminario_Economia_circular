@@ -730,6 +730,7 @@ export default function App() {
       <Navbar />
       <Hero />
       <About />
+      <GlobalReach/>
       <Timeline />
       <Facilitators />
       <Requirements />
