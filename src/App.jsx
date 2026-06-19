@@ -200,6 +200,79 @@ const About = () => {
   );
 };
 
+const GlobalReach = () => {
+  const companies = [
+    "Diario de México", "Ricinomex", "Safran", "Adhesivos Perdura", "Ipam Proyectos",
+    "Schlumberger", "PIMOSA", "Shukumei", "Tuxpas", "Baxter", "ACCIONA", "Grupo Rocher",
+    "CIEFSA", "Axtel", "Jugos del Valle", "Grupo Bimbo", "Pepsico", "Médicos Sin Fronteras",
+    "Sulzer Pumps", "Siemens Healthineers", "Trade Polymers", "GEPP", "Laboratorios Grin",
+    "Porcelanite", "Volkswagen", "CIS Consultores"
+  ];
+
+  return (
+    <section id="impact" className="py-24 bg-slate-50 relative overflow-hidden border-t border-slate-200">
+      <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-30"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <FadeIn>
+            <h2 className="text-[#0B6A35] font-bold tracking-wide uppercase text-sm mb-2">Impacto Real</h2>
+            <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">Alcance Nacional e Internacional</h3>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Nuestros egresados cursaron seminario en organizaciones de primer nivel alrededor del mundo.
+            </p>
+          </FadeIn>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <FadeIn delay={100}>
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 text-[#1D4ED8]">
+                <IconGlobe className="w-8 h-8" />
+              </div>
+              <div className="text-4xl font-black text-slate-900 mb-2">6</div>
+              <div className="text-lg font-bold text-slate-700 mb-2">Países</div>
+              <p className="text-sm text-slate-500">México, Alemania, China, Estados Unidos, India y Canadá.</p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={200}>
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 text-[#0B6A35]">
+                <IconMapPin className="w-8 h-8" />
+              </div>
+              <div className="text-4xl font-black text-slate-900 mb-2">9</div>
+              <div className="text-lg font-bold text-slate-700 mb-2">Estados (México)</div>
+              <p className="text-sm text-slate-500">CDMX, Edomex, N.L., Puebla, Veracruz, Hidalgo, Querétaro, Guanajuato, Tlaxcala, Oaxaca, Tlaxcala, Chiapas y Q. Roo.</p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={300}>
+            <div className="bg-white rounded-2xl p-8 text-center shadow-lg border border-slate-100 hover:-translate-y-2 transition-transform duration-300">
+              <div className="w-16 h-16 bg-sky-100 rounded-full flex items-center justify-center mx-auto mb-6 text-[#38BDF8]">
+                <IconBriefcase className="w-8 h-8" />
+              </div>
+              <div className="text-4xl font-black text-slate-900 mb-2">+25</div>
+              <div className="text-lg font-bold text-slate-700 mb-2">Empresas</div>
+              <p className="text-sm text-slate-500">Multinacionales y organizaciones líderes en su sector.</p>
+            </div>
+          </FadeIn>
+        </div>
+
+        <FadeIn delay={400} className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-slate-100">
+          <h4 className="text-center font-bold text-slate-800 mb-8 border-b border-slate-200 pb-4 inline-block w-full">Casos de Éxito en el Sector Productivo</h4>
+          <div className="flex flex-wrap justify-center gap-3">
+            {companies.map((company, idx) => (
+              <span key={idx} className="bg-slate-50 text-slate-700 border border-slate-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-[#38BDF8] hover:text-white hover:border-[#38BDF8] transition-colors cursor-default shadow-sm">
+                {company}
+              </span>
+            ))}
+          </div>
+        </FadeIn>
+      </div>
+    </section>
+  );
+};
 const Timeline = () => {
   const modules = [
     { week: "Semanas 1-4", title: "Gestión de Proyectos", date: "Unidad I", desc: "Introducción a la gestión de proyectos, iniciación, planificación, ejecución y metodologías de gestión de proyectos 4.0 enfocadas en sustentabilidad." },
