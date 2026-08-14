@@ -161,7 +161,11 @@ const Hero = () => {
 // NUEVA SECCIÓN DE ANUNCIO DE REUNIÓN
 const MeetingAnnouncement = () => {
   return (
-    <section className="bg-gradient-to-r from-slate-900 to-[#0B6A35] py-16 relative overflow-hidden border-b-8 border-[#38BDF8]">
+    <section 
+      id="reunion"
+      className="py-16 relative overflow-hidden border-b-8 border-[#38BDF8]"
+      style={{ background: 'linear-gradient(to right, #0f172a, #0b6a35)' }}
+    >
       {/* Fondo decorativo */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
       
@@ -191,7 +195,6 @@ const MeetingAnnouncement = () => {
                 <Button
                   href="https://teams.microsoft.com/l/meetup-join/19%3a5715dc5810b245fc9b23d8349c137832%40thread.skype/1786651448650?context=%7b%22Tid%22%3a%22f94bf4d9-8097-4794-adf6-a5466ca28563%22%2c%22Oid%22%3a%22350df59f-e0a4-47ee-94e5-c247bced5f65%22%7d"
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="w-full bg-[#5B5FC7] hover:bg-[#464775] text-white shadow-lg border border-[#7b7fda] flex items-center justify-center gap-2"
                 >
                   <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M22.05 6.47L17.5 9v6l4.55 2.53a.5.5 0 00.75-.43V6.9a.5.5 0 00-.75-.43zM15 6H4a2 2 0 00-2 2v8a2 2 0 002 2h11a2 2 0 002-2V8a2 2 0 00-2-2z"/></svg>
@@ -200,7 +203,7 @@ const MeetingAnnouncement = () => {
               </div>
               
               <div className="shrink-0 bg-white p-3 rounded-2xl text-center shadow-lg transform rotate-2 hover:rotate-0 transition-transform">
-                 <img src="/qr_teams_meeting.png" alt="QR Microsoft Teams" className="w-28 h-28 mx-auto" onError={(e) => { e.target.style.display = 'none'; }} />
+                 <img src="/qr_teams_meeting.png" alt="QR Microsoft Teams" className="w-28 h-28 mx-auto object-contain" onError={(e) => { e.target.style.display = 'none'; }} />
                  <p className="text-slate-800 text-[11px] font-black mt-2 tracking-wide">ESCANEAR PARA ENTRAR</p>
               </div>
             </div>
@@ -208,7 +211,7 @@ const MeetingAnnouncement = () => {
 
           {/* Lado derecho: Video */}
           <FadeIn delay={200} className="w-full flex justify-center lg:justify-end mt-10 lg:mt-0">
-            <div className="w-full max-w-sm rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/20 bg-black aspect-[9/16] relative group">
+            <div className="w-full max-w-[320px] max-h-[550px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/20 bg-black aspect-[9/16] relative group">
               <video
                 controls
                 autoPlay
@@ -217,11 +220,10 @@ const MeetingAnnouncement = () => {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                {/* Aquí debe ir tu video */}
                 <source src="/video_promo.mp4" type="video/mp4" />
                 Tu navegador no soporta la reproducción de videos.
               </video>
-              <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs font-bold backdrop-blur-md border border-white/20">
+              <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs font-bold backdrop-blur-md border border-white/20 pointer-events-none">
                 Resumen del Seminario
               </div>
             </div>
