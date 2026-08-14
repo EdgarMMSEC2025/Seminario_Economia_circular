@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+// --- COMPONENTES DE ANIMACIÓN ---
 const FadeIn = ({ children, delay = 0, className = "" }) => {
   const [isVisible, setIsVisible] = useState(false);
   const domRef = useRef();
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
-      // Solo anima una vez cuando entra en pantalla
       if (entries[0].isIntersecting) {
         setIsVisible(true);
         observer.unobserve(domRef.current);
@@ -31,6 +31,7 @@ const FadeIn = ({ children, delay = 0, className = "" }) => {
   );
 };
 
+// --- ICONOS SVG ---
 const IconLeaf = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>;
 const IconCpu = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m14-6h2m-2 6h2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>;
 const IconWhatsApp = ({ className }) => <svg className={className} fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>;
@@ -44,7 +45,8 @@ const IconGlobe = ({ className }) => <svg className={className} fill="none" view
 const IconMapPin = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>;
 const IconBriefcase = ({ className }) => <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>;
 
-const Button = ({ children, href, variant = 'primary', className = '' }) => {
+// --- COMPONENTES UI COMPARTIDOS ---
+const Button = ({ children, href, variant = 'primary', className = '', ...props }) => {
   const baseStyle = "inline-flex items-center justify-center font-bold rounded-xl transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5";
   const variants = {
     primary: "bg-[#38BDF8] text-slate-900 hover:bg-[#0284c7] hover:text-white",
@@ -53,12 +55,13 @@ const Button = ({ children, href, variant = 'primary', className = '' }) => {
   };
   
   return (
-    <a href={href} className={`${baseStyle} ${variants[variant]} ${className} px-6 py-3`}>
+    <a href={href} className={`${baseStyle} ${variants[variant]} ${className} px-6 py-3`} {...props}>
       {children}
     </a>
   );
 };
 
+// --- SECCIONES DE LA PÁGINA ---
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -150,6 +153,81 @@ const Hero = () => {
             <div className="text-sm text-blue-200 mt-1">Lugares restantes</div>
           </div>
         </FadeIn>
+      </div>
+    </section>
+  );
+};
+
+// NUEVA SECCIÓN DE ANUNCIO DE REUNIÓN
+const MeetingAnnouncement = () => {
+  return (
+    <section className="bg-gradient-to-r from-slate-900 to-[#0B6A35] py-16 relative overflow-hidden border-b-8 border-[#38BDF8]">
+      {/* Fondo decorativo */}
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
+          
+          {/* Lado izquierdo: Información y Link */}
+          <FadeIn className="text-white">
+            <div className="inline-block bg-red-600 text-white px-4 py-1.5 rounded-full text-xs font-black tracking-widest mb-6 animate-pulse shadow-[0_0_15px_rgba(220,38,38,0.6)]">
+              🔴 PRÓXIMA SESIÓN EN VIVO
+            </div>
+            <h2 className="text-3xl md:text-5xl font-black mb-4 leading-tight drop-shadow-md text-white">
+              Reunión Informativa
+            </h2>
+            <p className="text-lg md:text-xl text-blue-100 mb-8 font-light max-w-lg leading-relaxed">
+              Conéctate y resuelve todas tus dudas sobre el proceso de inscripción, el temario completo y conoce al cuerpo de facilitadores.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 items-center bg-black/30 p-6 md:p-8 rounded-3xl border border-white/10 shadow-2xl backdrop-blur-sm">
+              <div className="flex-1 text-center sm:text-left w-full">
+                <div className="text-[#38BDF8] font-black text-2xl mb-1 uppercase tracking-wide">Lunes 17 de Agosto</div>
+                <div className="text-white font-medium text-lg mb-6 flex items-center justify-center sm:justify-start gap-2">
+                  <IconClock className="w-5 h-5 text-yellow-400" />
+                  20:00 h (Hora Centro)
+                </div>
+                
+                <Button
+                  href="https://teams.microsoft.com/l/meetup-join/19%3a5715dc5810b245fc9b23d8349c137832%40thread.skype/1786651448650?context=%7b%22Tid%22%3a%22f94bf4d9-8097-4794-adf6-a5466ca28563%22%2c%22Oid%22%3a%22350df59f-e0a4-47ee-94e5-c247bced5f65%22%7d"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-[#5B5FC7] hover:bg-[#464775] text-white shadow-lg border border-[#7b7fda] flex items-center justify-center gap-2"
+                >
+                  <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M22.05 6.47L17.5 9v6l4.55 2.53a.5.5 0 00.75-.43V6.9a.5.5 0 00-.75-.43zM15 6H4a2 2 0 00-2 2v8a2 2 0 002 2h11a2 2 0 002-2V8a2 2 0 00-2-2z"/></svg>
+                  Unirme por MS Teams
+                </Button>
+              </div>
+              
+              <div className="shrink-0 bg-white p-3 rounded-2xl text-center shadow-lg transform rotate-2 hover:rotate-0 transition-transform">
+                 <img src="/qr_teams_meeting.png" alt="QR Microsoft Teams" className="w-28 h-28 mx-auto" onError={(e) => { e.target.style.display = 'none'; }} />
+                 <p className="text-slate-800 text-[11px] font-black mt-2 tracking-wide">ESCANEAR PARA ENTRAR</p>
+              </div>
+            </div>
+          </FadeIn>
+
+          {/* Lado derecho: Video */}
+          <FadeIn delay={200} className="w-full flex justify-center lg:justify-end mt-10 lg:mt-0">
+            <div className="w-full max-w-sm rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/20 bg-black aspect-[9/16] relative group">
+              <video
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                {/* Aquí debe ir tu video */}
+                <source src="/video_promo.mp4" type="video/mp4" />
+                Tu navegador no soporta la reproducción de videos.
+              </video>
+              <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs font-bold backdrop-blur-md border border-white/20">
+                Resumen del Seminario
+              </div>
+            </div>
+          </FadeIn>
+
+        </div>
       </div>
     </section>
   );
@@ -705,6 +783,7 @@ export default function App() {
     <div className="font-sans text-slate-800 antialiased selection:bg-[#38BDF8] selection:text-white scroll-smooth">
       <Navbar />
       <Hero />
+      <MeetingAnnouncement />
       <About />
       <GlobalReach />
       <Timeline />
