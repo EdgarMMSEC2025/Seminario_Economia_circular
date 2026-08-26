@@ -391,7 +391,6 @@ const Timeline = () => {
 const Facilitators = () => {
   const docentes = [
     { name: "M. en A. Edgar Maldonado Mosqueda", role: "Coordinador y Facilitador", img: "/foto-edgar.jpg" },
-    { name: "Dra. Jahel Valdés Sauceda", role: "Facilitadora", img: "/foto-jahel.jpg" },
     { name: "M. en C. Angélica Jaime Fonseca", role: "Facilitadora", img: "/foto-angelica.jpg" },
     { name: "Dra. Aurora Hernández Garrido", role: "Facilitadora", img: "/foto-aurora.jpg" },
   ];
