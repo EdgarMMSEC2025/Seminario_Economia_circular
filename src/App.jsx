@@ -104,7 +104,7 @@ const Hero = () => {
       </div>
       
       <div className="absolute top-0 left-0 w-full bg-[#38BDF8] text-slate-900 text-center py-2 font-bold text-sm z-40 animate-pulse">
-        🔥 ÚLTIMOS LUGARES DISPONIBLES - DOS GRUPOS APERTURADOS 🔥
+        🔥 ESPERA NUESTRA SIGUIENTE CONVOCATORIA EN DICIEMBRE 2026 🔥
       </div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -148,7 +148,7 @@ const Hero = () => {
           <div className="text-center relative">
             <div className="text-3xl font-bold text-yellow-400 flex justify-center items-center gap-1">
               <div className="w-3 h-3 bg-yellow-400 rounded-full animate-ping absolute top-2 right-6"></div>
-              ÚLTIMOS LUGARES
+              0
             </div>
             <div className="text-sm text-blue-200 mt-1">Lugares restantes</div>
           </div>
