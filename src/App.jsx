@@ -754,7 +754,7 @@ const ClosingMedia = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Foto 1 */}
           <FadeIn delay={100} className="group rounded-3xl overflow-hidden shadow-lg border border-slate-100 aspect-video relative">
-            <img src="/Seminario_Economia_circular/public/Foto1.jpeg" alt="Clausura 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img src="/Foto1.jpeg" alt="Clausura 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
               <span className="text-white font-bold tracking-wide">Entrega de constancias</span>
             </div>
@@ -762,7 +762,7 @@ const ClosingMedia = () => {
           
           {/* Foto 2 */}
           <FadeIn delay={200} className="group rounded-3xl overflow-hidden shadow-lg border border-slate-100 aspect-video relative">
-            <img src="/Seminario_Economia_circular/public/Foto2.jpeg" alt="Clausura 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img src="/Foto2.jpeg" alt="Clausura 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
               <span className="text-white font-bold tracking-wide">Foto de generación</span>
             </div>
@@ -771,14 +771,14 @@ const ClosingMedia = () => {
           {/* Video 1 */}
           <FadeIn delay={300} className="rounded-3xl overflow-hidden shadow-lg border border-slate-100 aspect-video bg-black relative">
             <video controls className="w-full h-full object-cover">
-              <source src="/public/Video1.mp4" type="video/mp4" />
+              <source src="/Video1.mp4" type="video/mp4" />
             </video>
           </FadeIn>
 
           {/* Video 2 */}
           <FadeIn delay={400} className="rounded-3xl overflow-hidden shadow-lg border border-slate-100 aspect-video bg-black relative">
             <video controls className="w-full h-full object-cover">
-              <source src="/public/Video2.mp4" type="video/mp4" />
+              <source src="/Video2.mp4" type="video/mp4" />
             </video>
           </FadeIn>
         </div>
