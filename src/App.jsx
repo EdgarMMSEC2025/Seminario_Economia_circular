@@ -104,7 +104,7 @@ const Hero = () => {
       </div>
       
       <div className="absolute top-0 left-0 w-full bg-[#38BDF8] text-slate-900 text-center py-2 font-bold text-sm z-40 animate-pulse">
-        🔥 ESPERA NUESTRA SIGUIENTE CONVOCATORIA EN DICIEMBRE 2026 🔥
+        🔥 ESPERA NUESTRA SIGUIENTE CONVOCATORIA EN DICIEMBRE 🔥
       </div>
       
 
@@ -189,11 +189,11 @@ const MeetingAnnouncement = () => {
             
             <div className="flex flex-col sm:flex-row gap-6 items-center bg-black/30 p-6 md:p-8 rounded-3xl border border-white/10 shadow-2xl backdrop-blur-sm">
               <div className="flex-1 text-center sm:text-left w-full">
-                <div className="text-[#38BDF8] font-black text-2xl mb-1 uppercase tracking-wide">Lunes 17 de Agosto</div>
+                <div className="text-[#38BDF8] font-black text-2xl mb-1 uppercase tracking-wide">Enero 2027</div>
                 <div className="text-white font-medium text-lg mb-6 flex items-center justify-center sm:justify-start gap-2">
-                  <IconClock className="w-5 h-5 text-yellow-400" />
-                  20:00 h (Hora Centro)
-                </div>
+                 <IconClock className="w-5 h-5 text-yellow-400" />
+                   Horarios y fechas por confirmar
+                   </div>
                 
                 <Button
                   href="https://teams.microsoft.com/l/meetup-join/19%3a5715dc5810b245fc9b23d8349c137832%40thread.skype/1786651448650?context=%7b%22Tid%22%3a%22f94bf4d9-8097-4794-adf6-a5466ca28563%22%2c%22Oid%22%3a%22350df59f-e0a4-47ee-94e5-c247bced5f65%22%7d"
