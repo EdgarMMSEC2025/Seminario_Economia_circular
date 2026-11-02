@@ -754,7 +754,7 @@ const ClosingMedia = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Foto 1 */}
           <FadeIn delay={100} className="group rounded-3xl overflow-hidden shadow-lg border border-slate-100 aspect-video relative">
-            <img src="/Foto1.jpeg" alt="Clausura 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img src="/Foto1.jpeg" alt="Clausura 1" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
               <span className="text-white font-bold tracking-wide">Entrega de constancias</span>
             </div>
@@ -764,7 +764,7 @@ const ClosingMedia = () => {
           <FadeIn delay={200} className="group rounded-3xl overflow-hidden shadow-lg border border-slate-100 aspect-video relative">
             <img src="/Foto2.jpeg" alt="Clausura 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-              <span className="text-white font-bold tracking-wide">Foto de generación</span>
+              <span className="text-white font-bold tracking-wide">Entrega de constancias</span>
             </div>
           </FadeIn>
 
