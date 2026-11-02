@@ -739,6 +739,54 @@ const EnrollmentForm = () => {
   );
 };
 
+const ClosingMedia = () => {
+  return (
+    <section id="clausura" className="py-24 bg-slate-50 relative overflow-hidden border-t border-slate-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <FadeIn className="text-center mb-16">
+          <h2 className="text-[#0B6A35] font-bold tracking-wide uppercase text-sm mb-2">Galería</h2>
+          <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">Clausura del Seminario</h3>
+          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            Revive los momentos más destacados del cierre de nuestras generaciones.
+          </p>
+        </FadeIn>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Foto 1 */}
+          <FadeIn delay={100} className="group rounded-3xl overflow-hidden shadow-lg border border-slate-100 aspect-video relative">
+            <img src="/Seminario_Economia_circular/public/Foto1.jpeg" alt="Clausura 1" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+              <span className="text-white font-bold tracking-wide">Entrega de constancias</span>
+            </div>
+          </FadeIn>
+          
+          {/* Foto 2 */}
+          <FadeIn delay={200} className="group rounded-3xl overflow-hidden shadow-lg border border-slate-100 aspect-video relative">
+            <img src="/Seminario_Economia_circular/public/Foto2.jpeg" alt="Clausura 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+              <span className="text-white font-bold tracking-wide">Foto de generación</span>
+            </div>
+          </FadeIn>
+
+          {/* Video 1 */}
+          <FadeIn delay={300} className="rounded-3xl overflow-hidden shadow-lg border border-slate-100 aspect-video bg-black relative">
+            <video controls className="w-full h-full object-cover">
+              <source src="/public/Video1.mp4" type="video/mp4" />
+            </video>
+          </FadeIn>
+
+          {/* Video 2 */}
+          <FadeIn delay={400} className="rounded-3xl overflow-hidden shadow-lg border border-slate-100 aspect-video bg-black relative">
+            <video controls className="w-full h-full object-cover">
+              <source src="/public/Video2.mp4" type="video/mp4" />
+            </video>
+          </FadeIn>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Footer = () => (
   <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -796,6 +844,7 @@ export default function App() {
       <Requirements />
       <PricingAndMedia />
       <EnrollmentForm />
+      <ClosingMedia />
       <Footer />
       <FloatingWhatsApp />
     </div>
