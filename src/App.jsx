@@ -111,22 +111,6 @@ const Hero = () => {
   🔥 ESPERA NUESTRA SIGUIENTE CONVOCATORIA EN DICIEMBRE 🔥
 </div>
 
-// Indicadores de fechas y lugares
-<div className="text-center">
-  <div className="text-xl md:text-2xl font-bold text-[#38BDF8] whitespace-nowrap">01 Mar / 08 Mar</div>
-  <div className="text-sm text-blue-200 mt-1">Fechas de inicio</div>
-</div>
-<div className="text-center">
-  <div className="text-3xl font-bold text-white">2</div>
-  <div className="text-sm text-blue-200 mt-1">Grupos disponibles</div>
-</div>
-<div className="text-center relative">
-  <div className="text-3xl font-bold text-yellow-400 flex justify-center items-center gap-1">
-    <div className="w-3 h-3 bg-yellow-400 rounded-full animate-ping absolute top-2 right-6"></div>
-    60
-  </div>
-  <div className="text-sm text-blue-200 mt-1">Lugares restantes</div>
-</div>
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <FadeIn>
