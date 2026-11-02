@@ -587,24 +587,24 @@ const PricingAndMedia = () => {
         <div className="mb-16">
           <FadeIn>
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-lg text-center max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold text-[#1D4ED8] mb-6">Fechas y Grupos Disponibles (2026-2)</h3>
+              <h3 className="text-2xl font-bold text-[#1D4ED8] mb-6">Fechas y Grupos Disponibles </h3>
               <div className="grid md:grid-cols-2 gap-6 text-left">
                 <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 shadow-inner hover:-translate-y-1 transition-transform">
-                  <div className="font-bold text-xl text-slate-900 mb-2 border-b border-blue-200 pb-2">Grupo 1</div>
+                  <div className="font-bold text-xl text-slate-900 mb-2 border-b border-blue-200 pb-2">Grupo 14</div>
                   <div className="text-slate-700 flex items-center gap-2 mb-2 font-semibold">
-                    <IconCalendar className="w-5 h-5 text-[#0B6A35]" /> Inicio: 31 de Agosto 2026
+                    <IconCalendar className="w-5 h-5 text-[#0B6A35]" /> Inicio: 01 de Marzo 2027
                   </div>
                   <div className="text-slate-600 flex items-center gap-2">
-                    <IconClock className="w-5 h-5 text-slate-400" /> Término: 16 de Diciembre 2026
+                    <IconClock className="w-5 h-5 text-slate-400" /> Término: 04 de Julio 2027
                   </div>
                 </div>
                 <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 shadow-inner hover:-translate-y-1 transition-transform">
-                  <div className="font-bold text-xl text-slate-900 mb-2 border-b border-blue-200 pb-2">Grupo 2</div>
+                  <div className="font-bold text-xl text-slate-900 mb-2 border-b border-blue-200 pb-2">Grupo 15</div>
                   <div className="text-slate-700 flex items-center gap-2 mb-2 font-semibold">
-                    <IconCalendar className="w-5 h-5 text-[#0B6A35]" /> Inicio: 03 de Septiembre 2026
+                    <IconCalendar className="w-5 h-5 text-[#0B6A35]" /> Inicio: 08 de Marzo 2027
                   </div>
                   <div className="text-slate-600 flex items-center gap-2">
-                    <IconClock className="w-5 h-5 text-slate-400" /> Término: 20 de Diciembre 2026
+                    <IconClock className="w-5 h-5 text-slate-400" /> Término: 08 de Julio 2027
                   </div>
                 </div>
               </div>
@@ -621,6 +621,7 @@ const PricingAndMedia = () => {
                 <h3 className="text-xl font-bold text-slate-600 mb-2 uppercase tracking-wide">Inversión Única</h3>
                 <div className="text-5xl font-black text-slate-900 mb-4">$14,000 <span className="text-xl text-slate-500 font-medium">MXN</span></div>
                 <p className="text-slate-500 text-sm">Programa completo de 16 semanas.</p>
+                <p className="text-red-600 text-xs font-bold mt-2">* Nota: El costo puede tener una variación en 2027.</p>
               </div>
               <div className="p-10">
                 <ul className="space-y-4 mb-8">
