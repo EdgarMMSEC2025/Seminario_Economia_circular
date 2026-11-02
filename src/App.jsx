@@ -762,7 +762,7 @@ const ClosingMedia = () => {
           
           {/* Foto 2 */}
           <FadeIn delay={200} className="group rounded-3xl overflow-hidden shadow-lg border border-slate-100 aspect-video relative">
-            <img src="/Foto2.jpeg" alt="Clausura 2" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img src="/Foto2.jpeg" alt="Clausura 2" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
               <span className="text-white font-bold tracking-wide">Entrega de constancias</span>
             </div>
