@@ -138,7 +138,7 @@ const Hero = () => {
             <div className="text-3xl font-bold text-white">16</div>
             <div className="text-sm text-blue-200 mt-1">Semanas de duración</div>
           </div>
-          // Indicadores de fechas y lugares
+        
 <      div className="text-center">
         <div className="text-xl md:text-2xl font-bold text-[#38BDF8] whitespace-nowrap">01 Mar / 08 Mar</div>
          <div className="text-sm text-blue-200 mt-1">Fechas de inicio</div>
