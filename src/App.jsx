@@ -223,7 +223,7 @@ const MeetingAnnouncement = () => {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="/video_promo.mp4" type="video/mp4" />
+                <source src="/video_promo" type="video/mp4" />
                 Tu navegador no soporta la reproducción de videos.
               </video>
               <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs font-bold backdrop-blur-md border border-white/20 pointer-events-none">
