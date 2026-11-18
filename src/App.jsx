@@ -104,7 +104,7 @@ const Hero = () => {
       </div>
       
       <div className="absolute top-0 left-0 w-full bg-[#38BDF8] text-slate-900 text-center py-2 font-bold text-sm z-40 animate-pulse">
-        🔥 ESPERA NUESTRA SIGUIENTE CONVOCATORIA EN DICIEMBRE 🔥
+        🔥 INSCRIPCIONES ABIERTAS ¡ESTE NO SOLO ES UN SEMINARIO DE TITULACIÓN, ES LA CLAVE PARA TU DESARROLLO PROFSIONAL! 🔥
       </div>
       
 
@@ -215,6 +215,7 @@ const MeetingAnnouncement = () => {
           {/* Lado derecho: Video */}
           <FadeIn delay={200} className="w-full flex justify-center lg:justify-end mt-10 lg:mt-0">
             <div className="w-full max-w-[320px] max-h-[550px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/20 bg-black aspect-[9/16] relative group">
+
               <img src="/1.png" alt="Clausura 2" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs font-bold backdrop-blur-md border border-white/20 pointer-events-none">
                 Resumen del Seminario
