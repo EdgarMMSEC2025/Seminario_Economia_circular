@@ -390,8 +390,8 @@ const Facilitators = () => {
   ];
 
   const facilitadorasApoyo = [
-    { name: "Ing. Nassyra María Larragoiti Gutiérrez", role: "Facilitadora", img: "/foto-nassyra.jpg" },
-    { name: "Ing. Yuliana Garrido Garrido", role: "Facilitadora", img: "/foto-yuliana.jpg" },
+    { name: "Ing. Nassyra María Larragoiti Gutiérrez", role: "Facilitadora", img: "/Nassyry.jpeg" },
+    { name: "Ing. Yuliana Garrido Garrido", role: "Facilitadora", img: "/yuliana.jpeg" },
   ];
 
   const handleImageError = (e) => {
