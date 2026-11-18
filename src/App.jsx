@@ -215,17 +215,7 @@ const MeetingAnnouncement = () => {
           {/* Lado derecho: Video */}
           <FadeIn delay={200} className="w-full flex justify-center lg:justify-end mt-10 lg:mt-0">
             <div className="w-full max-w-[320px] max-h-[550px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white/20 bg-black aspect-[9/16] relative group">
-              <video
-                controls
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source src="/video_promo.mp4" type="video/mp4" />
-                Tu navegador no soporta la reproducción de videos.
-              </video>
+              <img src="/1.png" alt="Clausura 2" className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded-full text-xs font-bold backdrop-blur-md border border-white/20 pointer-events-none">
                 Resumen del Seminario
               </div>
@@ -745,7 +735,7 @@ const ClosingMedia = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeIn className="text-center mb-16">
           <h2 className="text-[#0B6A35] font-bold tracking-wide uppercase text-sm mb-2">Galería</h2>
-          <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">Clausura del Seminario</h3>
+          <h3 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">Clausura del Seminario sexta generacion</h3>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
             Revive los momentos más destacados del cierre de nuestras generaciones.
           </p>
