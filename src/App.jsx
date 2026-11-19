@@ -104,7 +104,7 @@ const Hero = () => {
       </div>
       
       <div className="absolute top-0 left-0 w-full bg-[#38BDF8] text-slate-900 text-center py-2 font-bold text-sm z-40 animate-pulse">
-        🔥 INSCRIPCIONES ABIERTAS ¡ESTE NO SOLO ES UN SEMINARIO DE TITULACIÓN, ES LA CLAVE PARA TU DESARROLLO PROFSIONAL! 🔥
+        🔥 INSCRIPCIONES ABIERTAS ¡ESTE NO SOLO ES UN SEMINARIO DE TITULACIÓN, ES LA CLAVE PARA TU DESARROLLO PROFESIONAL! 🔥
       </div>
       
 
